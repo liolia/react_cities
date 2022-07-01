@@ -1,13 +1,21 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import App from './components/app/app';
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement,
-);
+const Places = {
+  PLACES_COUNT: 314,
+};
 
-root.render(
+const Sorting = {
+  SORT_TYPE: 'By Price',
+};
+
+ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App
+      placesCount = {Places.PLACES_COUNT}
+      sortType = {Sorting.SORT_TYPE}
+    />
   </React.StrictMode>,
+  document.getElementById('root')
 );
